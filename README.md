@@ -1,19 +1,20 @@
 #Capstone Project Overview
 ##Application Name
 **********************************************
-Tech Job Seeker
+Sneaker Genius
 
 ##Elevator Pitch
 **********************************************
-This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.
-
-This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.
+This application allows the online community to contribute to fact based information on any and every sneaker ever made. It will be a realiable online source that is upheld by the online sneaker community. Users will be able to upload textual information as well as pictures and links. Sneaker Experts will able to search for information on sneakers as well as compare information. Appointed admins will have special access to edit and delete information on this application. Log in will be required for each user.
+A discussion forum will also be a key feature for registered users. They will be able to post comments and discussion topics.
 
 ##Key Features
 **********************************************
 1. User and Admin Login
-2. Saved jobs within User Profiles
-3. Google Maps integration for Employer location
+2. Post, Search, and Compare sneaker profiles
+3. Search Upcoming release dates
+4. Discussion and Topic Forum
+
 
 ##Technologies List
 **********************************************
@@ -21,30 +22,36 @@ This application allows job seekers to find and search for jobs on the market an
 2. Java
 3. Bootstrap
 4. CSS
-5. Google Maps API
+5. Sneaker Release Date API
 
 ##Example Applications
 **********************************************
-Indeed.com : https://www.indeed.com/
-monster.com : https://www.monster.com/
-
+wikipedia.com :  https://www.wikipedia.org/
+sneakerbardetroit : https://sneakerbardetroit.com/
 
 ##Initial User stories
 **********************************************
-As a Job Seeker I want to list all available jobs so that I can get an overview of the overall job market.
+As a Sneaker Expert I want to add sneaker profiles, so that I can contribute to online sneaker community.
 
-As a Job Seeker I want to search for jobs by location, skill and employer so I can find jobs that are within specfication.
+As a Sneaker Expert I want to edit my sneaker profile so that I can provide correct information and update them.
 
-As a Job Seeker I want to access a personal profile of my choices so I can have jobs specific to my needs display.
+As a Sneaker Expert I want to search for sneaker profiles so that I can gain knowledge on certain shoes.
 
-As a Job Seeker I want to save relivent jobs to my profile so I can return to them on a later date.
+As a Sneaker Expert I want to search all upcoming sneaker release dates so I can stay in the know.
 
-As a Company I want to add in a new job entries so I can allow job seekers to easily find them.
+As a Sneaker Expert I want to add comments and discussion topics so that I can interact with other Sneaker Experts.
 
-As a Company I want to edit in a job entries so I can update their status their properties easily.
+As an Admin I want to delete sneaker profiles so that I can monitor the application.
 
-As a Company I want to disable job entries that I am no longer offering so that job seekers can not see them.
+As an Admin I want to edit any sneaker profile so that I can make corrections.
 
-As a Company I want to delete job entries that are no longer valid so that job seeker can not access them.
+As an Admin I want to delete posts and comments inside of forums to monitor discussions.
 
-As a Company I want to see a list of all of my job entries that are they can easily be edited and updated in the future.
+As a NON-REGISTERED user I want to search information about specific sneakers.
+
+As a NON-REGISTERED user I want to read posts and threads inside of the forum.
+
+As a NON-REGISTERED user I can not post topics or comments inside of the forum.
+
+
+
