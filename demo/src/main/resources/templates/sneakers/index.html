@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../add.js">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+    <div class="container p-1 mb-2 bg-secondary text-white">
+        <nav>
+            <h1 th:text="${title}"></h1>
+
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a href="https://sneakergeniusforum.discussion.community/">Forum</a></li>
+                <li><a th:href="@{/sneakers}">Sneaker Profiles</a></li>
+                <li><a th:href="@{search}">Search Sneakers</a></li>
+                <li><a th:href="@{release}">Upcoming Release Dates</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+<div class="container">
+<ul>
+    <li><a class="nav-link" href="/sneakers/add">Add Sneaker Profile</a></li>
+    <li><a class="nav-link" href="/sneakers/delete">Delete Sneaker Profile</a></li>
+    <li><a class="nav-link" href="/sneakers/edit">Edit Sneaker Profile</a></li>
+</ul>
+</div>
+
+<br>
+<div class="container body-content">
+<table class="table table-condensed">
+    <tr th:each="sneaker : ${sneakers}">
+        <td>
+            <p>Sneaker Id:
+
+            <p th:text="${sneaker.id}"> </p>
+
+            <p>
+            <p>
+                Name:
+            <p th:text="${sneaker.designer}"></p>
+            <p/>
+
+            <p>
+                Designer:
+            <p  th:text="${sneaker.releaseDate}"></p>
+            </p>
+
+            <p>
+                Colorway:
+            <p  th:text="${sneaker.colorway}"></p>
+            </p>
+
+            <p>
+                Year Released:
+            <p  th:text="${sneaker.releaseDate}"></p>
+            </p>
+
+
+            <p>
+                Retail Price:
+            <p  th:text="${sneaker.retailPrice}"></p>
+                </p>
+
+
+            <p>
+                Description:
+            <p  th:text="${sneaker.description}"></p>
+                </p>
+
+
+            <p>
+                Link to Image:
+            <p  th:text="${sneaker.image}"></p>
+                </p>
+
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+</body>
+</html>
+
+<!--<table class="table"></table>-->
+<!--<thead>-->
+<!--<tr>-->
+<!--    <th>ID</th>-->
+<!--    <th>Name</th>-->
+<!--    <th>Colorway</th>-->
+<!--    <th>Release Date</th>-->
+<!--    <th>Retail Price</th>-->
+<!--    <th>Description</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr th:each="sneaker : ${sneakers}">-->
+<!--    <td th:text="${sneaker.id}"></td>-->
+<!--    <td th:text="${sneaker.name}"></td>-->
+<!--    <td th:text="${sneaker.colorway}"></td>-->
+<!--    <td th:text="${sneaker.releaseDate}"></td>-->
+<!--    <td th:text="${sneaker.retailPrice}"></td>-->
+<!--    <td th:text="${sneaker.description}"></td>-->
+<!--    &lt;!&ndash;    <td><a th:href="@{/events/edit/{id}{id=${event.id}}}">Edit</a></td>&ndash;&gt;-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->

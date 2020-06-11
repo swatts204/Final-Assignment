@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../addstylesheet.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+    <div class="container p-1 mb-2 bg-secondary text-white">
+        <nav>
+            <h1 th:text="${title}"></h1>
+
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a href="https://sneakergeniusforum.discussion.community/">Forum</a></li>
+                <li><a th:href="@{/sneakers}">Sneaker Profiles</a></li>
+                <li><a th:href="@{search}">Search Sneakers</a></li>
+                <li><a th:href="@{release}">Upcoming Release Dates</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+<div class="container">
+<form method = "post">
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/AirJordan6Hare.jpg}" alt="Jordan 6" width="600" height="400">
+        <div class="desc">Air Jordan 6 Hare</div>
+        <div class="desc">June 17, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{UpcomingReleasePics/ReebokQuestionOrange.jpg}" alt="Reebok" width="600" height="400">
+        <div class="desc">Reebok Low Patent Vivid Orange</div>
+        <div class="desc">June 18, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/addidas4DCore.jpg}" alt="addidas" width="600" height="400">
+        <div class="desc">addidas ZX 4D Core Black</div>
+        <div class="desc">June 19, 2020</div>
+    </div>
+
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Airmax90Camo.jpg}" alt="Airmax90" width="600" height="400">
+        <div class="desc">Nike Air Max 90 Orange Camo</div>
+        <div class="desc">June 19, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/ReebokKamikaze.jpg}" alt="Reebok" width="600" height="400">
+        <div class="desc">Reebok Kamikaz II OG 25th Anniversary</div>
+        <div class="desc">June 19, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan5Top3.jpg}" alt="Jordan 5" width="600" height="400">
+        <div class="desc">Air Jordan 5 Top 3</div>
+        <div class="desc">June 20, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan1ZoomRage.jpg}" alt="Jordan 1" width="600" height="400">
+        <div class="desc">Air Jordan 1 High Zoom Rage Green</div>
+        <div class="desc">June 20, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/NikeDunkLow.jpg}" alt="Nike Dunk" width="600" height="400">
+        <div class="desc">Nike Dunk Low SP Champ Colors</div>
+        <div class="desc">June 24, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan3AnimalInstinct.jpg}" alt="Jordan 3" width="600" height="400">
+        <div class="desc">Air Jordan 3 Animal Instinct 2.0</div>
+        <div class="desc">June 25, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/jordan3RoyalBlue.jpg}" alt="jordan 3" width="600" height="400">
+        <div class="desc">Air Jordan 3 Varsity Royal</div>
+        <div class="desc">June 25, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan1WTieDye.jpg}" alt="Jordan 1" width="600" height="400">
+        <div class="desc">Air Jordan 1 High OG WMNS Tie Dye</div>
+        <div class="desc">June 26, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/DunkLowUniRed.jpg}" alt="Dunk Low" width="600" height="400">
+        <div class="desc">Nike Dunk Low SP University Red</div>
+        <div class="desc">July 1, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan14GymRed.jpg}" alt="Jordan 14" width="600" height="400">
+
+        <div class="desc">Air Jordan 14 Gym Red</div>
+        <div class="desc">July 2, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan13LuckyGreen.jpeg}" alt="Jordan 13" width="600" height="400">
+        <div class="desc">Air Jordan 13 Lucky Green</div>
+        <div class="desc">July 4, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan5AltGrape.jpg}" alt="Jordan 5" width="600" height="400">
+        <div class="desc">Air Jordan 5 Alternate Grape</div>
+        <div class="desc">Jul 7, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan11Low.jpg}" alt="jordan 11" width="600" height="400">
+        <div class="desc">Air Jordan 11 Low IE Black Cement</div>
+        <div class="desc">July 9, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan11LowConcordW.jpg}" alt="Jordan 11" width="600" height="400">
+
+        <div class="desc">Air Jordan 11 Low WMNS Concord</div>
+        <div class="desc">July 10, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan1LightSmokeGrey.jpg}" alt="Jordan 1" width="600" height="400">
+        <div class="desc">Air Jordan 1 High OG Light Smoke Grey</div>
+        <div class="desc">July 11, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/Jordan1OGBLDLINE2.0.jpg}" alt="jordan 1" width="600" height="400">
+        <div class="desc">Air Jordan 1 Retro High OG Bloodline 2.0</div>
+        <div class="desc">July 11, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/yeeezyboost700Bone.jpg}" alt="yeezy" width="600" height="400">
+        <div class="desc">addidas Yeezy Boost 700 MNVN Bone</div>
+        <div class="desc">July 11, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/thumb_ipad_adidas-yeezy-boost-350-v2-zyon.jpg}" alt="yeezy" width="600" height="400">
+        <div class="desc">addidas Yeezy Boost 350 v2 Zyon</div>
+        <div class="desc">July 11, 2020</div>
+    </div>
+
+    <div class="gallery">
+            <img th:src="@{/UpcomingReleasePics/thumb_ipad_adidas-yeezy-boost-380-blue-oat.jpeg}" alt="addidas" width="600" height="400">
+        <div class="desc">addidas Yeezy Boost 380 Blue Oat</div>
+        <div class="desc">July 18, 2020</div>
+    </div>
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+    <header>
+        <div class="container p-1 mb-2 bg-secondary text-white">
+            <nav>
+                <h1 th:text="${title}"></h1>
+
+                <ul>
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a href="https://sneakergeniusforum.discussion.community/">Forum</a></li>
+                    <li><a th:href="@{/sneakers}">Sneaker Profiles</a></li>
+                    <li><a th:href="@{/search}">Search Sneakers</a></li>
+                    <li><a th:href="@{release}">Upcoming Release Dates</a></li>
+                    <li><a th:href="@{/login}">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<body>
+<div class="container">
+<form method="post">
+    <div class="form-group">
+        <label>Name of Sneaker
+            <input th:field="${sneaker.name}" class="form-control">
+        </label>
+        <p class="error" th:errors="${sneaker.name}"></p>
+    </div>
+
+
+    <div class="form-group">
+        <label>Designed By
+            <input th:field="${sneaker.designer}" class="form-control">
+        </label>
+        <p class="error" th:errors="${sneaker.designer}"></p>
+    </div>
+
+
+    <div class="form-group">
+        <label>colorway
+            <input th:field="${sneaker.colorway}" class="form-control">
+        </label>
+
+    </div>
+
+
+    <div class="form-group">
+        <label>Release Date
+            <input th:field="${sneaker.releaseDate}" class="form-control">
+        </label>
+
+    </div>
+
+
+    <div class="form-group">
+        <label>Retail Price
+            <input th:field="${sneaker.retailPrice}" class="form-control">
+        </label>
+        <p class="error" th:errors="${sneaker.retailPrice}"></p>
+    </div>
+
+    <div class="form-group">
+        <label>Add Link to Image
+            <input type="text" th:field="${sneaker.image}" class="form-control">
+        </label>
+        <p class="error" th:errors="${sneaker.image}"></p>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        </br>
+
+        <textarea th:field="${sneaker.description}" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <p class="error" th:errors="${sneaker.description}"></p>
+    </div>
+    <br>
+
+
+
+    <input type="submit" class="btn btn-primary" value="submit" />
+
+
+
+
+
+</form>
+</div>
+</body>
+</html>

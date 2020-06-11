@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{stylesheet.css}" rel="stylesheet" />
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<header>
+    <div class="container p-1 mb-2 bg-secondary text-white">
+        <nav>
+            <h1 th:text="${title}"></h1>
+
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a href="https://sneakergeniusforum.discussion.community/">Forum</a></li>
+                <li><a th:href="@{sneakers}">Sneaker Profiles</a></li>
+                <li><a th:href="@{search}">Search Sneakers</a></li>
+                <li><a th:href="@{release}">Upcoming Release Dates</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+<div class="container sneaker-listing">
+    <p th:text="${'ID: ' + sneaker.id}"></p>
+    <p th:text="${'Name: ' + sneaker.name}"></p>
+    <p>
+        Sneaker: <p th:text="${sneaker.name.id}}"></p>
+
+    </p>
+    <p>
+        Designer: <p th:text="${sneaker.designer.id}}"></p>
+
+    </p>
+    <p>
+        Colorway: <p th:text="${sneaker.colorway.id}}"></p>
+
+    </p>
+    <p>
+        Year of Release: <p th:text="${sneaker.releaseDate.id}}"></p>
+
+    </p>
+    <p>
+        Retail Price: <p th:text="${sneaker.retailPrice.id}}"></p>
+
+    </p>
+    <p>
+        Description: <p th:text="${sneaker.description.id}}"></p>
+
+    </p>
+
+</div>
+
+</body>
+</html>

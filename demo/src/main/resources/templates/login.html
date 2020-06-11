@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<header>
+    <div class="container p-1 mb-2 bg-secondary text-white">
+        <nav>
+            <h1 th:text="${title}"></h1>
+
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a href="https://sneakergeniusforum.discussion.community/">Forum</a></li>
+                <li><a th:href="@{sneakers}">Sneaker Profiles</a></li>
+                <li><a th:href="@{search}">Search Sneakers</a></li>
+                <li><a th:href="@{release}">Upcoming Release Dates</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+<form class="center" method="post">
+<div class="form-group">
+    <label>Username
+        <input class="form-control" th:field="${loginFormDTO.username}" />
+    </label>
+    <p class="error" th:errors="${loginFormDTO.username}"></p>
+</div>
+    <div class="form-group">
+    <label>Password
+        <input class="form-control" th:field="${loginFormDTO.password}" type="password" />
+    </label>
+    <p class="error" th:errors="${loginFormDTO.password}"></p>
+</div>
+
+<input type="submit" class="btn btn-primary" value="Login" />
+</form>
+<p class="center">Don't have an account?<a href="/register">Register for an account.</a></p><form method="post"></form>
+
+</html>
