@@ -18,11 +18,10 @@ public class Sneaker extends AbstractEntity {
     @NotBlank(message = "Retail price is required!")
     private String retailPrice;
 
-    @Size(max = 500, message = "Description is too long!")
+    @Size(max=5000, message = "Description is too long!")
     private String description;
 
     private String image;
-
 
     public Sneaker(String name, String designer, String colorway, String releaseDate, String retailPrice, String description, String image) {
         this.name = name;
@@ -32,6 +31,7 @@ public class Sneaker extends AbstractEntity {
         this.retailPrice = retailPrice;
         this.description = description;
         this.image = image;
+
     }
 
     public Sneaker() {}
@@ -96,4 +96,6 @@ public class Sneaker extends AbstractEntity {
     public String toString(){
         return name;
     }
+
+
 }

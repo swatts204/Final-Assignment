@@ -9,7 +9,6 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.Optional;
 
 @Controller
 @RequestMapping("sneakers")
@@ -17,7 +16,19 @@ public class SneakerController {
 
     @Autowired
     private SneakerRepository sneakerRepository;
-
+//    @Autowired
+//    AuthenticationController authenticationController;
+//
+//
+//    @RequestMapping("")
+//    public String index(HttpServletRequest request, Model model){
+//        HttpSession session = request.getSession();
+//        User user = authenticationController.getUserFromSession(session);
+//        model.addAttribute("role", user.getRole());
+//
+//
+//        return "index";
+//    }
     @GetMapping
     public String displayAllSneakerProfiles(Model model){
         model.addAttribute("title", "Sneaker Profiles");
@@ -58,31 +69,7 @@ public class SneakerController {
 
         return "redirect:";
     }
-    @GetMapping("edit/{sneakerId}")
-    public String displayEditForm(Model model, @PathVariable int sneakerId){
-        Optional<Sneaker> sneakerContainer = sneakerRepository.findById(sneakerId);
-        Sneaker sneakerToEdit = sneakerContainer.get();
 
-        model.addAttribute("sneaker, sneakerToEdit");
-        String title= "Edit Sneaker Profile" + sneakerToEdit.getName() + "(id=" + sneakerToEdit.getId() +")";
-        model.addAttribute("title", title);
-
-        return "sneakers/edit";
-    }
-    @PostMapping("edit")
-    public String processEditForm(int sneakerId, String name, String designer, String colorway, String releaseDate, String retailPrice, String description, String image ){
-        Sneaker sneakerToEdit = sneakerRepository.findById(sneakerId).get();
-
-        sneakerToEdit.setName(name);
-        sneakerToEdit.setDesigner(designer);
-        sneakerToEdit.setColorway(colorway);
-        sneakerToEdit.setReleaseDate(releaseDate);
-        sneakerToEdit.setDescription(description);
-
-        sneakerRepository.save(sneakerToEdit);
-
-        return "redirect:";
-    }
 }
 
 

@@ -18,10 +18,10 @@
         <ul>
             <li><a th:href="@{/}">Home</a></li>
             <li><a href="https://sneakergeniusforum.discussion.community/">Forum</a></li>
-            <li><a th:href="@{sneakers}">Sneaker Profiles</a></li>
-            <li><a th:href="@{search}">Search Sneakers</a></li>
-            <li><a th:href="@{releases}">Upcoming Release Dates</a></li>
-            <li><a th:href="@{login}">Login</a></li>
+            <li><a th:href="@{/sneakers}">Sneaker Profiles</a></li>
+            <li><a th:href="@{/search}">Search Sneakers</a></li>
+            <li><a th:href="@{/release}">Upcoming Release Dates</a></li>
+            <li><a th:href="@{/logout}">Logout</a></li>
         </ul>
     </nav>
 </div>
@@ -48,38 +48,38 @@
     <table>
         <tr th:each="sneaker : ${sneakers}">
             <td>
-                <p>
+                <p style="font-weight:bold">
                     Sneaker Id:
                     <p th:text="${sneaker.id}"></p>
                 </p>
-                <p>
+                <p style="font-weight:bold">
                     Name:
                     <p th:text="${sneaker.designer}"></p>
                 </p>
-                <p>
+                <p style="font-weight:bold">
                     Designer:
                         <p  th:text="${sneaker.releaseDate}"></p>
                 </p>
-                <p>
+                <p style="font-weight:bold">
                     Colorway:
                 <p  th:text="${sneaker.colorway}"></p>
                 </p>
-                <p>
+                <p style="font-weight:bold">
                     Year Released:
                 <p  th:text="${sneaker.releaseDate}"></p>
                 </p>
-                <p>
+                <p style="font-weight:bold">
                     Retail Price:
                 <p  th:text="${sneaker.retailPrice}"></p>
                 </p>
-                <p>
+                <p style="font-weight:bold">
                     Description:
                 <p  th:text="${sneaker.description}"></p>
                 </p>
-                <p>
-                    Link to Image:
-                <p  th:text="${sneaker.image}"></p>
-                </p>
+                <p style="font-weight:bold">
+                    Image: </p>
+                <img  th:src="${sneaker.image}" width="400" height="300"></img>
+
             </td>
         </tr>
     </table>

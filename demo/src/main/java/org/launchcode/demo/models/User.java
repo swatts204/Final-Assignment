@@ -18,14 +18,17 @@ public class User extends AbstractEntity {
     @NotNull
     private String pwHash;
 
-    public User() {
 
-    }
+
 
     public User(String username, String password, String role) {
         this.username = username;
         this.pwHash = encoder.encode(password);
         this.role = role;
+    }
+
+    public User() {
+
     }
 
     public String getUsername() {
@@ -43,4 +46,6 @@ public class User extends AbstractEntity {
     public void setRole(String role) {
         this.role = role;
     }
+
+
 }

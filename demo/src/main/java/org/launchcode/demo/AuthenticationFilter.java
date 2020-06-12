@@ -21,7 +21,7 @@ public class AuthenticationFilter extends HandlerInterceptorAdapter {
     @Autowired
     AuthenticationController authenticationController;
 
-    private static final List<String> whitelist = Arrays.asList("/login","register","/logout","/js/bootstrap");
+    private static final List<String> whitelist = Arrays.asList("/login","register","/logout","sneakers/add","/js/bootstrap");
 
     private static boolean isWhitelisted(String path) {
         for (String pathRoot: whitelist){
@@ -46,6 +46,10 @@ public class AuthenticationFilter extends HandlerInterceptorAdapter {
 
 
         if (user != null) {
+//            if(request.getRequestURI().equals("sneakers/add") && !user.getRole().equals("admin")){
+//                response.sendRedirect("/login");
+//                return false;
+//            }
             return true;
         }
 

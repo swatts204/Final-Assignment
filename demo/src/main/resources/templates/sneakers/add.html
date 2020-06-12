@@ -22,7 +22,7 @@
                     <li><a href="https://sneakergeniusforum.discussion.community/">Forum</a></li>
                     <li><a th:href="@{/sneakers}">Sneaker Profiles</a></li>
                     <li><a th:href="@{/search}">Search Sneakers</a></li>
-                    <li><a th:href="@{release}">Upcoming Release Dates</a></li>
+                    <li><a th:href="@{/release}">Upcoming Release Dates</a></li>
                     <li><a th:href="@{/login}">Login</a></li>
                 </ul>
             </nav>
@@ -33,7 +33,8 @@
 <div class="container">
 <form method="post">
     <div class="form-group">
-        <label>Name of Sneaker
+
+        <label class="text-justify">Name of Sneaker
             <input th:field="${sneaker.name}" class="form-control">
         </label>
         <p class="error" th:errors="${sneaker.name}"></p>
@@ -49,7 +50,7 @@
 
 
     <div class="form-group">
-        <label>colorway
+        <label>Colorway
             <input th:field="${sneaker.colorway}" class="form-control">
         </label>
 
@@ -57,7 +58,7 @@
 
 
     <div class="form-group">
-        <label>Release Date
+        <label>Year Released:
             <input th:field="${sneaker.releaseDate}" class="form-control">
         </label>
 
